@@ -26,9 +26,9 @@ def decode_sentence(morse_sent)
   splited_arr = morse_sent.split('   ')
   splited_arr.each do |sentence|
     str += decode_word(sentence)
-    str += ''
+    str += ' '
   end
-  str
+  str.strip
 end
 
 puts decode_char('.-')
