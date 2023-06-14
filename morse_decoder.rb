@@ -21,5 +21,17 @@ def decode_word(morse_word)
   str
 end
 
+def decode_sentence(morse_sent)
+  str = ''
+  splited_arr = morse_sent.split('   ')
+  splited_arr.each do |sentence|
+    str += decode_word(sentence)
+    str += " "
+  end
+  str
+end
+
 puts decode_char('.-')
 puts decode_word('-- -.--')
+puts decode_sentence('-- -.--   -. .- -- .')
+puts decode_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
